@@ -1,5 +1,5 @@
 
-import code from '@/assets/md/test.md'
+
 
 const name = 'test'
 
@@ -15,9 +15,6 @@ const foo = (a,b) =>{
 
 console.log(foo(1,2))
 
-console.log('imgOne',imgOne);
-console.log('imgTwo',imgTwo);
 console.log("webpack-custom-plugins")
 console.log("webpack-custom-plugins")
 
-document.querySelector('body').insertAdjacentHTML('beforeend', code) // 插入到body上

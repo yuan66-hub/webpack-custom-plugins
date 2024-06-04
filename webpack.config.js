@@ -18,19 +18,24 @@ module.exports = {
       '@': path.resolve(__dirname, 'src')
     },
   },
+  resolveLoader: {
+    modules: [
+      path.resolve(__dirname, "node_modules"),
+      path.resolve(__dirname, "loader"),
+    ],
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
-        use: [
-          path.resolve(__dirname, './loader/babel-loader.js')
-        ]
+        // Pitching Loader 执行顺序 从左到右 myLoader1->myLoader2->myLoader3
+        use: ['babel-loader'] // Normal loader 执行顺序 myLoader3->myLoader2->myLoader1
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         use: [
           {
-            loader: path.resolve(__dirname, './loader/url-loader.js'),
+            loader: 'url-loader',
             options: {
               limit: 10000,
             }
