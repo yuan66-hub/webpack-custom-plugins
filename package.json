@@ -6,15 +6,31 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode development",
-    "watch":"webpack --watch --mode development"
-
+    "watch": "webpack --watch --mode development"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.24.6",
+    "@babel/plugin-transform-runtime": "^7.24.6",
+    "@babel/preset-env": "^7.24.6",
+    "@babel/runtime": "^7.24.6",
+    "@babel/runtime-corejs3": "^7.24.6",
     "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "less": "^4.2.0",
+    "loader-utils": "^3.2.2",
+    "lodash.union": "^4.6.0",
+    "marked": "^12.0.2",
+    "mime": "^4.0.3",
+    "minimatch": "^9.0.4",
+    "recursive-readdir-sync": "^1.0.6",
+    "schema-utils": "^4.2.0",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "core-js": "3"
   }
 }
