@@ -1,6 +1,6 @@
 # 此项目仅供学习使用！！！
 
-# webpack三个辅助函数
+## webpack三个辅助函数
 
 1. __webpack_require__.d
 
@@ -47,7 +47,7 @@ webpack_require_.r = (exports)=>{
 ```
 
 
-# `__webpack_require__` 加载流程 vs `nodejs`模块加载机制
+## `__webpack_require__` 加载流程 vs `nodejs`模块加载机制
 
 1. 先定义一个变量`__webpack_module_cache__`作为加载了的模块的缓存
 2. `__webpack_require__`其实就是用来加载模块的
@@ -77,7 +77,7 @@ webpack_require_.r = (exports)=>{
  	}
 ```
 
-# webpack 如何将`import`和`export`关键字进行转成浏览器识别的代码
+## webpack 如何将`import`和`export`关键字进行转成浏览器识别的代码
 
 1. 将import这种浏览器不认识的关键字替换成了__webpack_require__函数调用。
 2. __webpack_require__在实现时采用了类似CommonJS的模块思想。
@@ -85,7 +85,7 @@ webpack_require_.r = (exports)=>{
 4. 当模块代码执行时，会将export的内容添加到这个模块对象上。
 5. 当再次引用一个以前引用过的模块时，会直接从缓存上读取模块。
 
-# 思考
+## 思考
 
 1. 优化`v8`垃圾回收优化策略，通过`webpack` 实现代码卸载，减少内存的占用
 
