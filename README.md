@@ -77,7 +77,7 @@ webpack_require_.r = (exports)=>{
  	}
 ```
 
-## webpack 如何将`import`和`export`关键字进行转成浏览器识别的代码
+## webpack 如何将`import`和`export`关键字转换成浏览器识别的代码
 
 1. 将import这种浏览器不认识的关键字替换成了__webpack_require__函数调用。
 2. __webpack_require__在实现时采用了类似CommonJS的模块思想。
