@@ -9,9 +9,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin') // 引用
 
 module.exports = {
   entry: './src/index.js',
+  devtool: 'source-map', // 启用 sourcemap，选择适合你的构建的 sourcemap 类型
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    devtoolModuleFilenameTemplate: '../sourcemaps'
   },
   resolve: {
     alias: {
